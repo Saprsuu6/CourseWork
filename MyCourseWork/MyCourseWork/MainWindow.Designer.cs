@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.label1 = new System.Windows.Forms.Label();
             this.FirstChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.Tree = new System.Windows.Forms.TreeView();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.FirstChart)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,11 +50,11 @@
             // 
             // FirstChart
             // 
-            chartArea1.Name = "ChartArea1";
-            this.FirstChart.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.FirstChart.ChartAreas.Add(chartArea2);
             this.FirstChart.ImeMode = System.Windows.Forms.ImeMode.Off;
-            legend1.Name = "Legend1";
-            this.FirstChart.Legends.Add(legend1);
+            legend2.Name = "Legend1";
+            this.FirstChart.Legends.Add(legend2);
             this.FirstChart.Location = new System.Drawing.Point(12, 25);
             this.FirstChart.Name = "FirstChart";
             this.FirstChart.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.None;
@@ -85,14 +86,25 @@
             // 
             this.Tree.Location = new System.Drawing.Point(234, 9);
             this.Tree.Name = "Tree";
-            this.Tree.Size = new System.Drawing.Size(357, 256);
+            this.Tree.Size = new System.Drawing.Size(357, 296);
             this.Tree.TabIndex = 4;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(12, 271);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(216, 34);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Прочитать информацию о расшерении .zip ";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // MyCourseWork
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(603, 275);
+            this.ClientSize = new System.Drawing.Size(603, 317);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.Tree);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -114,6 +126,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TreeView Tree;
+        private System.Windows.Forms.Button button3;
     }
 }
 

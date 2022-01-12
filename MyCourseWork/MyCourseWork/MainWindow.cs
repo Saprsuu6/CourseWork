@@ -90,7 +90,8 @@ namespace MyCourseWork
                             object obj = key.GetValue(value); // получем значение в виде базового типа object
 
                             if (obj != null) // если объект не ноль пишем значение его рядом с корнем
-                                treeNode.Nodes.Add(key.Name + " Value: " + obj.ToString());
+                                treeNode.Nodes.Add(key.Name +
+                                    " Value: " + obj.ToString() +" (Type: " + obj.GetType() + ")");
                         }
                     }
                     catch (Exception) // отлавливание ошибки
@@ -141,6 +142,14 @@ namespace MyCourseWork
             tasks.StartPosition = FormStartPosition.CenterParent; // посередине родителя
             tasks.Owner = this; // определение родителя (себя)
             tasks.ShowDialog(); // показываю модальное окно
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FileType fileType = new FileType(Registry.ClassesRoot.OpenSubKey(".zip")); // создание окна
+            fileType.StartPosition = FormStartPosition.CenterParent; // посередине родителя
+            fileType.Owner = this; // определение родителя (себя)
+            fileType.ShowDialog(); // показываю модальное окно
         }
     }
 }
